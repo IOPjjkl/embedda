@@ -69,11 +69,11 @@ function timestampglobal() {
 
 timestamp()
 
-document.getElementById("year").addEventListener("onchange", (event) => timestampglobal);
-document.getElementById("month").addEventListener("onchange", (event) => timestampglobal);
-document.getElementById("day").addEventListener("onchange", (event) => timestampglobal);
-document.getElementById("hour").addEventListener("onchange", (event) => timestampglobal);
-document.getElementById("minute").addEventListener("onchange", (event) => timestampglobal);
+document.getElementById("год").addEventListener("onchange", (event) => timestampglobal);
+document.getElementById("месяц").addEventListener("onchange", (event) => timestampglobal);
+document.getElementById("день").addEventListener("onchange", (event) => timestampglobal);
+document.getElementById("час").addEventListener("onchange", (event) => timestampglobal);
+document.getElementById("минута").addEventListener("onchange", (event) => timestampglobal);
 
 function AdjustWeeks(amount) {
   weeks += amount
@@ -123,15 +123,15 @@ function HandleWheel(event, adjustFunction)
   return false;
 }
 
-document.getElementById("weeks").onmousedown = event => HandleMouseClick(event, AdjustWeeks)
-document.getElementById("days").onmousedown = event => HandleMouseClick(event, AdjustDays)
-document.getElementById("hours").onmousedown = event => HandleMouseClick(event, AdjustHours)
-document.getElementById("minutes").onmousedown = event => HandleMouseClick(event, AdjustMinutes)
+document.getElementById("недели").onmousedown = event => HandleMouseClick(event, AdjustWeeks)
+document.getElementById("дней").onmousedown = event => HandleMouseClick(event, AdjustDays)
+document.getElementById("часов").onmousedown = event => HandleMouseClick(event, AdjustHours)
+document.getElementById("минут").onmousedown = event => HandleMouseClick(event, AdjustMinutes)
 
-document.getElementById("weeks").onwheel = event => HandleWheel(event, AdjustWeeks)
-document.getElementById("days").onwheel = event => HandleWheel(event, AdjustDays)
-document.getElementById("hours").onwheel = event => HandleWheel(event, AdjustHours)
-document.getElementById("minutes").onwheel = event => HandleWheel(event, AdjustMinutes)
+document.getElementById("недели").onwheel = event => HandleWheel(event, AdjustWeeks)
+document.getElementById("дней").onwheel = event => HandleWheel(event, AdjustDays)
+document.getElementById("часов").onwheel = event => HandleWheel(event, AdjustHours)
+document.getElementById("минут").onwheel = event => HandleWheel(event, AdjustMinutes)
 
 document.getElementById("mode").onchange = function (e) {
   var relative = document.querySelector(".relative")
