@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <title>Relative Timestamp Generator</title>
+  <title>Генератор времени для дискорда</title>
   <!-- <link rel="shortcut icon" type="image/jpg" href="/favicon.png"/> -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌏</text></svg>">
 
-  <meta name="description" content="Create timers for embedding into discord"/>
+  <meta name="description" content="Создание таймеров для встраивания в Discord"/>
   <link rel="stylesheet" href="index.css">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,12 +40,12 @@
 		<div>
 			<!-- HTML starts here -->
 			<div id="copy-banner" class="copy-banner">Copied to clipboard</div>
-			<h1>Discord Relative Timestamp Generator</h1>
+			<h1>Генератор текста со временим</h1>
 
-			<p>Create a timestamp that automatically counts down the time.</p>
+			<p>Создайте временную метку, которая автоматически отсчитывает время.</p>
 			<img src="example.png" height=81 alt="Your birthday is in [14 days]">
-			<p>Every day, hour, and minute, this little embed will count down for you! </p>
-			<p class="pc"> Right click to subtract time (-2 days will convert to "2 days ago", for example)</p>
+			<p>Каждый день, час и минута эта маленькая вставка будет вести обратный отсчет для вас.! </p>
+			<p class="pc"> Щелкните правой кнопкой мыши, чтобы вычесть время (например, -2 дня преобразуются в «2 дня назад»).)</p>
 
 			<div class=highlighted>
 				<h2>Select the 
@@ -66,11 +66,11 @@
 				<div oncontextmenu="return false;" class="nonrelative" hidden=true style="margin-bottom: 12px;"><!-- oncontextmenu="return false;" -->
 					<p style="margin:0px;">Date selection is done in UTC time. Your timezone is UTC<span id=timezone>+8</span>.</p>
 					<div class="look-at-these-guns">
-					<div class="name"><span>YEAR</span><textarea id="year" placeholder="Year..." rows=1 cols=7 onchange="timestampglobal()"></textarea></div>
-					<div class="name"><span>MONTH</span><textarea id="month" placeholder="Month..." rows=1 cols=7 onchange="timestampglobal()"></textarea></div>
-					<div class="name"><span>DAY</span><textarea id="day" placeholder="Day..." rows=1 cols=7 onchange="timestampglobal()"></textarea></div>
-					<div class="name"><span>HOUR</span><textarea id="hour" placeholder="Hour..." rows=1 cols=3 onchange="timestampglobal()"></textarea><p id=fake-hour></p></div>
-					<div class="name"><span>MINUTE</span><textarea id="minute" placeholder="Minute..." rows=1 cols=7 onchange="timestampglobal()"></textarea></div>
+					<div class="name"><span>Год</span><textarea id="year" placeholder="Year..." rows=1 cols=7 onchange="timestampglobal()"></textarea></div>
+					<div class="name"><span>Месяц</span><textarea id="month" placeholder="Month..." rows=1 cols=7 onchange="timestampglobal()"></textarea></div>
+					<div class="name"><span>День</span><textarea id="day" placeholder="Day..." rows=1 cols=7 onchange="timestampglobal()"></textarea></div>
+					<div class="name"><span></span>Час</span><textarea id="hour" placeholder="Hour..." rows=1 cols=3 onchange="timestampglobal()"></textarea><p id=fake-hour></p></div>
+					<div class="name"><span>Минута</span><textarea id="minute" placeholder="Minute..." rows=1 cols=7 onchange="timestampglobal()"></textarea></div>
 					<button class="reset" onmousedown="reset()"><i class="material-icons">cached</i></button>
 					</div>
 				</div>
@@ -86,13 +86,13 @@
 					<div>
 						<p>Select format:
 						<select id="type">
-							<option value="coutdown">Relative</option>
-							<option value="hour-short">Time</option>
-							<option value="hour-long">Long Time</option>
-							<option value="date-short">Date</option>
-							<option value="date-long">Long Date</option>
-							<option value="date-time">Date Time</option>
-							<option value="date-week">Date Weekday</option>
+							<option value="coutdown">Обычный</option>
+							<option value="hour-short">Время</option>
+							<option value="hour-long">Много времени</option>
+							<option value="date-short">Дата</option>
+							<option value="date-long">Много дат</option>
+							<option value="date-time">Дата и Время</option>
+							<option value="date-week">Дата День недели</option>
 						</select> </p>
 					</div>
 					<!-- <div>
